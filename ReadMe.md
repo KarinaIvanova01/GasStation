@@ -12,6 +12,11 @@ and prepares them to be stored in a database (only open station).
 ### Requirements 
 * Use Spring Boot
 * Create REST endpoints accordingly
-* Add documentation to README.md to explain how to build, start and access the service
 
+
+### Building and Running
+
+* Clone the repository
+* Run create.sql
+* Build the project
 

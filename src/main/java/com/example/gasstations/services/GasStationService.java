@@ -7,11 +7,11 @@ import java.util.List;
 public interface GasStationService {
     List<Station> getAll();
 
-    List<Station> getMedianPrice(String fuelType);
+    Double getMedianPrice(String fuelType);
 
-    List<Station> getMaxPrice(String fuelType);
+    Double getMaxPrice(String fuelType);
 
-    List<Station> getMinPrice(String fuelType);
+    Double getMinPrice(String fuelType);
 
-    Station findByName(String name);
+    List<Station> findByName(String name);
 }

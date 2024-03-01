@@ -17,28 +17,25 @@ public class GasStationController {
     public GasStationController(GasStationService gasStationService) {
         this.gasStationService = gasStationService;
     }
-    @GetMapping("/public")
-    public String helloPublic() {
-        return "Hello from public endpoint!";
-    }
+
     @GetMapping
     public List<Station> getAll() {
         return gasStationService.getAll();
     }
     @GetMapping("/{name}")
-    public Station getByName(@PathVariable String name) {
+    public List<Station> getByName(@PathVariable String name) {
         return gasStationService.findByName(name);
     }
 
     @GetMapping("/max/{fuelType}")
-    public List<Station> getMaxPrice(@PathVariable String fuelType) {
+    public Double getMaxPrice(@PathVariable String fuelType) {
         return gasStationService.getMaxPrice(fuelType);
     }
     @GetMapping("/min/{fuelType}")
-    public List<Station> getMinPrice(@PathVariable String fuelType) {
+    public Double getMinPrice(@PathVariable String fuelType) {
         return gasStationService.getMinPrice(fuelType);
     }  @GetMapping("/median/{fuelType}")
-    public List<Station> getMedianPrice(@PathVariable String fuelType) {
+    public Double getMedianPrice(@PathVariable String fuelType) {
         return gasStationService.getMedianPrice(fuelType);
     }
 
