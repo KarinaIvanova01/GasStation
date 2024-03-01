@@ -1,4 +1,4 @@
-package com.example.gasstations.FeignConfig;
+package com.example.gasstations.config.FeignConfig;
 
 import com.example.gasstations.models.Dto;
 import org.springframework.cloud.openfeign.FeignClient;

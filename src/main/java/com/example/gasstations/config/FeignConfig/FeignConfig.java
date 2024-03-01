@@ -1,4 +1,4 @@
-package com.example.gasstations.FeignConfig;
+package com.example.gasstations.config.FeignConfig;
 
 import feign.form.spring.SpringFormEncoder;
 import feign.okhttp.OkHttpClient;

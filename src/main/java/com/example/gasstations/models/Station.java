@@ -5,9 +5,9 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "stations")
+@Table(name = "station")
 
-public class Stations {
+public class Station {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -56,13 +56,13 @@ public class Stations {
     private String houseNumber;
 
     @Column(name = "postCode")
-    private String postCode;
+    private int postCode;
 
-    public Stations() {
+    public Station() {
     }
 
-    public Stations(UUID id, String name, String brand, String street, String place, double lat, double lng, double dist,
-                    double diesel, double e5, double e10, boolean isOpen, String houseNumber, String postCode) {
+    public Station(UUID id, String name, String brand, String street, String place, double lat, double lng, double dist,
+                   double diesel, double e5, double e10, boolean isOpen, String houseNumber, int postCode) {
         this.id = id;
         this.name = name;
         this.brand = brand;
@@ -127,7 +127,7 @@ public class Stations {
         return houseNumber;
     }
 
-    public String getPostCode() {
+    public int getPostCode() {
         return postCode;
     }
 
@@ -187,7 +187,7 @@ public class Stations {
         this.houseNumber = houseNumber;
     }
 
-    public void setPostCode(String postCode) {
+    public void setPostCode(int postCode) {
         this.postCode = postCode;
     }
 }

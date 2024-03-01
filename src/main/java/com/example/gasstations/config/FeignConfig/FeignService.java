@@ -1,4 +1,4 @@
-package com.example.gasstations.FeignConfig;
+package com.example.gasstations.config.FeignConfig;
 
 import com.example.gasstations.models.Dto;
 import com.example.gasstations.models.Station;
@@ -14,10 +14,10 @@ import java.util.List;
 public class FeignService {
 
 
-    private  GasStationClient gasStationClient;
+    private final GasStationClient gasStationClient;
 
     private final GasStationRepository gasStationRepository;
-  //  private  ObjectMapper objectMapper = new ObjectMapper();
+
 
 @Autowired
     public FeignService(GasStationClient gasStationClient, GasStationRepository gasStationRepository) {
